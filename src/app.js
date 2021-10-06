@@ -29,6 +29,6 @@ app.use(moviesRoutes);
 app.use(genresRoutes);
 
 /*apis */
-app.use('api/genres',require('./routes/api/genresRoutes'))
+app.use('/api/genres',require('./routes/api/genresRoutes'))
 //Activando el servidor desde express
 app.listen('3001', () => console.log('Servidor corriendo en el puerto 3001'));

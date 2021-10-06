@@ -6,7 +6,7 @@ const genresController = {
     'list': async (req, res) => {
         try {
             
-           let genres = await db.Genre.findALL()
+           let genres = await db.Genre.findAll()
 
            let response = {
                meta : {
@@ -26,7 +26,7 @@ const genresController = {
     'detail': async (req, res) => {
         
         try { 
-            let genre = await db.Genre.findByPk(req.params.id)
+            let genres = await db.Genre.findByPk(req.params.id)
 
             let response = {
                 meta : {
