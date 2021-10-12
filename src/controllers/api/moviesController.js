@@ -43,7 +43,7 @@ const moviesController = {
                     status : 200,
                     url : '/api/movies' + req.params.id
                     },
-                    data : movies
+                    data : movie
                 }
                 return res.status(200).json(response) 
            
@@ -75,7 +75,7 @@ const moviesController = {
     } catch (error) {
         return res.status(error.status || 500).json(error)
     }
-                              
+                            
                 
     },
     'recomended': (req, res) => {

@@ -26,14 +26,14 @@ const genresController = {
     'detail': async (req, res) => {
         
         try { 
-            let genres = await db.Genre.findByPk(req.params.id)
+            let genre = await db.Genre.findByPk(req.params.id)
 
             let response = {
                 meta : {
                 status : 200,
                 url : '/api/genres' + req.params.id
                 },
-                data : genres
+                data : genre
             }
             return res.status(200).json(response)
 
